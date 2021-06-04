@@ -226,7 +226,7 @@ public class Logic : MonoBehaviour
                     }
                     else if (text.Contains("set_x"))
                     {
-                        SetXFunction(text);
+                        // SetXFunction(text);
                     }
                     else if (text.Contains("set_y"))
                     {
