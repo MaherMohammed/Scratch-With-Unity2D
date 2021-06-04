@@ -145,6 +145,47 @@ public class Logic : MonoBehaviour
         return y;
     }
 
+    void SetXFunction(string text)
+    {
+        //extract x
+        int x = getXToBeSet(text);
+        //set x by the number extracted
+        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
+
+    void SetYFunction(string text)
+    {
+        //extract x
+        int y = getYToBeSet(text);
+        //set x by the number extracted
+        transform.position = new Vector3(transform.position.x, y, transform.position.z);
+    }
+
+    int getXToBeSet(string text)
+    {
+        int x = 0;
+        string num = "";
+        for (int i = text.Length - 1; !text[i].Equals('_'); i--)
+        {
+            num = text[i] + num;
+        }
+        int.TryParse(num, out x);
+        return x;
+    }
+
+
+    int getYToBeSet(string text)
+    {
+        int y = 0;
+        string num = "";
+        for (int i = text.Length - 1; !text[i].Equals('_'); i--)
+        {
+            num = text[i] + num;
+        }
+        int.TryParse(num, out y);
+        return y;
+    }
+
     // int numberOfLoops = 0;
     void SpaceClicked()
     {
@@ -182,6 +223,14 @@ public class Logic : MonoBehaviour
                     else if (text.Contains("change_y"))
                     {
                         // ChangeYFunction(text);
+                    }
+                    else if (text.Contains("set_x"))
+                    {
+                        SetXFunction(text);
+                    }
+                    else if (text.Contains("set_y"))
+                    {
+                        SetYFunction(text);
                     }
 
 
