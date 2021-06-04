@@ -1,0 +1,49 @@
+when_space_isClicked
+  BEGIN
+    move_10_steps
+    turnR_15_degrees
+    go_to_x_1_y_2
+    change_x_by_10
+    set_x_11
+    change_y_by_10
+    set_y_2
+  END
+when_GF_isClicked
+  BEGIN
+    say_Hello!
+    say_Hello!_for_2_seconds
+    think_Hmm...
+    think_Hmm..._for_2_seconds
+  END
+forever
+  BEGIN
+    say_Hello!
+  END
+if_apple_contains_a
+  BEGIN
+    move_10_steps
+  END
+if_apple_contains_a
+  BEGIN
+    move_10_steps
+  END
+ELSE
+  BEGIN
+    turnL_15_degrees
+  END
+repeat_until_a_isClicked
+  BEGIN
+    move_5_steps
+  END
+repeat_10_times
+  BEGIN
+    move_10_steps
+    wait_1
+  END
+turnR_15_degrees
+repeat_10_times
+  BEGIN
+    move_10_steps
+    wait_until_up arrow_isClicked
+  END
+turnR_15_degrees
